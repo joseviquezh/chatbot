@@ -1,0 +1,19 @@
+{
+    "categories": [
+        {
+            "patterns": ["Hello", "Hi", "Howdy", "Hi there", "What's up"],
+            "responses": ["Hi", "Hello", "Howdy", "Hey"],
+            "tag": "greet"
+        },
+        {
+            "patterns": ["What is your job", "What you do for work"],
+            "responses": ["My work is to chat with humans"],
+            "tag": "job"
+        },
+        {
+            "patterns": ["What is your age", "How old are you", "When were you born"],
+            "responses": ["I was born in 2022"],
+            "tag": "age"
+        }
+    ]
+}
