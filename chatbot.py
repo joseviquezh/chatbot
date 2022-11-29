@@ -1,9 +1,4 @@
 # Standard libraries
-from nltk.stem import WordNetLemmatizer
-from nltk import download, word_tokenize
-from numpy import array as np_array, ndarray
-from keras.layers import Dense, Dropout
-from keras import Sequential, optimizers
 from inquirer import prompt, Text
 from json import loads
 from os import getcwd, environ
@@ -12,9 +7,14 @@ from string import punctuation
 from typing import Tuple, List
 
 # Disable Tensorflow messages
-environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 # ML libraries
+from keras import Sequential, optimizers
+from keras.layers import Dense, Dropout
+from numpy import array as np_array, ndarray
+from nltk import download, word_tokenize
+from nltk.stem import WordNetLemmatizer
 
 
 class ChatBot:
