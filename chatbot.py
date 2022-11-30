@@ -4,10 +4,18 @@ from json import loads
 from os import getcwd, environ
 from random import shuffle, choice
 from string import punctuation
+from ssl import _create_unverified_context, _create_default_https_context
 from typing import Tuple, List
 
 # Disable Tensorflow messages
 environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+# To prevent SSL errors
+try:
+    _create_unverified_https_context = _create_unverified_context
+except AttributeError:
+    pass
+else:
+    _create_default_https_context = _create_unverified_https_context
 
 # ML libraries
 from keras import Sequential, optimizers
